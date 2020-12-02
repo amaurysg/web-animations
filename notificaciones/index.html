@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notificación</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      background: url("platzi_af35259c-28c0-4cff-978a-db92dcaad896.png");
+      background-size: 100%;
+      height: 200vh;
+      margin: 0;
+    }
+
+    .notification {
+      color: white;
+      width: 45px;
+      height: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .notification:before {
+      content: "\f0f3";
+      font-family: "FontAwesome";
+      display: block;
+    }
+
+    .header {
+      background: #1d3644;
+      height: 45px;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 200px;
+    }
+
+    .notification:after {
+      content: "1";
+      font-family: arial;
+      font-size: 11px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 14px;
+      height: 14px;
+
+      background: #ff4600;
+      border-radius: 50%;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+    }
+
+    .btn {
+      text-align: center;
+      background: aqua;
+      padding: .6em .8em .8em;
+      border: none;
+      color: white;
+      background: lightgray;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: inset 0 -.2em rgba(0, 0, 0, .2);
+      outline: 0;
+      transition: .2s;
+      will-change: transform;
+    }
+
+    .btn:active {
+      transform: scale(.9);
+    }
+
+    .btn.primary {
+
+      background: #7dc800;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <button class="btn primary">Enviar</button>
+    <div class="notification"></div>
+
+  </div>
+</body>
+
+</html>

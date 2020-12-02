@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprites</title>
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .like {
+      /*  width: 100px;
+      height: 100px; */
+      width: 50px;
+      height: 50px;
+
+      cursor: pointer;
+
+      background-image: url("corazon.jpg");
+      background-size: 1450px 50px;
+
+
+
+    }
+
+    .like.is-like {
+      animation-name: like;
+      animation-duration: .8s;
+      animation-timing-function: steps(5);
+      /* 2900(width de img) / 29(imagenes) = 100px */
+      animation-timing-function: steps(28);
+      /*   background-position: -2800px 0; */
+      background-position: right;
+      animation-fill-mode: forwards;
+      ;
+    }
+
+    @keyframes like {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        /*  background-position: -2800px 0; */
+        background-position: right;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tweet-box" id="tweet">
+    <div class="like" id="like"></div>
+  </div>
+  <script>
+    const $buttonLike = document.getElementById("like")
+    /* const $buttonLike = document.getElementById("like") */
+    $buttonLike.addEventListener("click", () => {
+      $buttonLike.classList.toggle("is-like")
+    })
+  </script>
+</body>
+
+</html>
